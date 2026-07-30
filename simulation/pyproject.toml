@@ -1,0 +1,9 @@
+[project]
+name = "epistemic-subcriticality-sim"
+version = "0.1.0"
+description = "Deterministic demonstrator for Epistemic Subcriticality: a two-type formation reproduction number, a numerical certificate that content-neutral process interventions are exactly blind to truth, a matched-suppression comparison showing that process levers buy suppression by destroying vindication while absorptive capacity does not, and a reinforcement model in which an established formation survives a subcritical invasion number"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.26",
+    "matplotlib>=3.8",
+]
