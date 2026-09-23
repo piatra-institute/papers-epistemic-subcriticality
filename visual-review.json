@@ -1,0 +1,21 @@
+{
+  "pdf_sha256": "046e842efd29efab41dcce0945c205189254eab189e45e45052fa293be019a67",
+  "page_count": 13,
+  "pages_inspected": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+  ],
+  "all_pages_inspected": true,
+  "notes": "All 13 pages inspected after the prose revision; title page, abstract, nine numbered sections, Reproducibility and a 28-entry bibliography set cleanly. Figure titles were replaced by descriptive ones; the figure 3 title, which clipped at the right edge after the first rewrite, was shortened and re-inspected; the figure 2 labels for friction, correction and deplatforming, which overlapped each other and the 'matched suppression' annotation, were moved to leader lines with their absorption values, and the rebuilt page was re-inspected. No overfull lines, missing glyphs or orphaned headings. Metadata-only rebuild: the web blurb in metadata.yaml, a hashed build input, changed, so the PDF was re-rendered (ded8ae152d78 to 046e842efd29); the rendered text is byte-for-byte identical and no page was re-inspected."
+}

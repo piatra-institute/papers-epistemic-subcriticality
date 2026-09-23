@@ -3,6 +3,17 @@
 Dated log of editorial passes and verification runs. Newest first.
 See the workspace docs (run `papers docs`): writing-pipeline.md §7 and refresh-pipeline.md.
 
+## 2026-09-23 — prose revision
+
+Prose revision against the house standard.
+  - Headings: Abstract; 1. Introduction; 2. Model; 3. Structural non-discrimination; 4. Architectural asymmetry and uniform friction; 5. Absorption as a third fate; 6. Matched-suppression comparison; 7. Invasion threshold and persistence under reinforcement; 8. Limitations; 9. Conclusion; Reproducibility.
+  - Tic counts before -> after: 'rather than' 17 -> 0; 'this paper' 7 -> 0; 'not X but Y' 1 -> 0; 'worth' 2 -> 0; 'exactly/precisely' 3 -> 0; sentence-initial 'That is/This is' 6 -> 1. Abstract 520 -> 261 words. Seed reference ('The seed proposal nominated flat-earthism') removed.
+  - Corrections: (1) 'removing roughly a third of the vindicable claim's chance' -> 'a loss of 28 to 35 per cent' (0.1385/0.4985 = 0.278 to 0.1730/0.4985 = 0.347; 'a third' overstated deplatforming and correction). (2) 'once beta >= 4 delta there are two [positive equilibria]' -> 'for beta > 4 delta'; at equality the two roots coincide. (3) Absorptivity matched to the target at 0.35450 was said to be 'suppressed as much as friction suppressed it' (friction reached 0.35325); now 'at the matched target'. (4) Test rate 0.327999 written as 0.328, matching the table.
+  - Grid audit: no grid artefact. Matched-suppression intensities come from a 28-step bisection with common random numbers; the demonetisation intensity 0.95 is the admissible bound (lever saturates); the reinforcement equilibria are closed form. The asymmetry sweep (ratios 1 to 4) and absorption sweep report grid points as grid points. All prose numbers checked against results.json.
+  - Code: the 'fates_partition' invariant was vacuous (it checked p_persist <= 1); it now checks that each baseline's three terminal probabilities sum to one and that each policy's recorded vindicable fates do not exceed one. Added results field matched_suppression.mc_standard_error_max = 0.007906 (binomial SE at p = 0.5, 4,000 replicates) with an invariant tying it to the replicate count; the text now states it (0.0079), and the demonetisation effect on absorption (+0.0065) is described as within Monte Carlo error. Eight invariants pass; results.json otherwise unchanged.
+  - Noted, not changed: the absorption sweep's a = 0.05 point (absorption 0.461, persistence 0.68525) and the matched-suppression baseline at the same rate (0.4985, 0.70825) use independent random streams and differ by about 3.3 and 2 standard errors of the difference; the text cites only the baseline.
+  - Figures: slogan titles replaced by descriptive ones; figure 2 labels moved to leader lines with absorption values. README regenerated.
+
 ## 2026-07-30 — first draft, simulation, and publish
 
 Scope: the whole paper, from the seeded chat to a published PDF, a runnable simulation, and a web entry.

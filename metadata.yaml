@@ -1,14 +1,33 @@
 slug: epistemic-subcriticality
 web_slug: epistemic-subcriticality
-title: "Epistemic Subcriticality: Process Interventions Are Blind to Truth, and What to Maximise Instead"
-header: "Epistemic Subcriticality"
-created: "2026-07"        # inception month (drives YYYY/MM archive path)
-date: "July 2026"             # publication month, e.g. "May 2026" (shown on web)
+title: 'Epistemic Subcriticality: Process Interventions Are Blind to Truth, and What to Maximise Instead'
+header: Epistemic Subcriticality
+created: 2026-07
+date: July 2026
 paper_dir: paper
 has_simulation: true
-claims_target: results.json   # results.json | claim-ledger | none
+claims_target: results.json
 repo: git@github.com:piatra-institute/papers-epistemic-subcriticality.git
 github: https://github.com/piatra-institute/papers-epistemic-subcriticality
-status: published             # draft | built | published
-abstract: |-
-  A recurring proposal in political epistemology is that a society should not try to abolish false beliefs but should instead make organised falsehood non-reproducing, holding the reproduction number of a belief formation below one while leaving expression free. Its central safeguard against becoming censorship is that interventions act on processes rather than propositions. This paper shows that the safeguard is empty, and then repairs the proposal by changing what the system is asked to maximise. Model a claim-centred formation as a two-type branching process over active transmitters and organisational units, with lifetime offspring matrix K and formation reproduction number R_F = rho(K); in the baseline architecture used throughout, K = [[1.6, 4.0],[0.1, 0.3]] and R_F = 1.856918. The first result is a triviality with a sharp consequence: truth is not an argument of K, so any intervention that is a function of the architecture alone induces the same change in log R_F for a refuted formation and for a vindicable one that shares that architecture. The simulation reports the discrepancy as exactly zero across four levers and three intensities. Content-neutral process interventions are therefore not approximately blind to truth; they are blind by construction, and discrimination requires either a claim-level classifier, which reintroduces the problem the process framing was introduced to avoid, or an architectural asymmetry between refuted and vindicable formations, which the paper tests and finds running the wrong way: as the refuted formation's organisational channel grows relative to the challenger's, the discrimination index of uniform friction falls from 0.199 to 0.068. The repair is a transition every model in this literature omits. A formation has a third fate besides persistence and extinction, namely absorption, in which its claim-set is taken up by the general infrastructure and the formation dissolves because nobody organises to defend what everyone teaches. Absorption is the success mode of true heterodoxy, it is unavailable to a robustly refuted claim, and its rate is a system parameter an institution can raise without knowing which claims are true. Held to equal suppression of the refuted formation, the three process levers that can reach the target cut the vindicable claim's absorption probability from 0.4985 to between 0.3255 and 0.360, while raising absorptive capacity reaches the same suppression and raises absorption to 0.820. A fourth lever, demonetisation, cannot reach the target at any admissible intensity, because it touches a channel whose two entries hold 0.118760 and 0.022884 of the elasticity of R_F while the transmitter entry holding 0.739597 is supercritical on its own. Finally, subcriticality does not deliver even what it promises: under reinforcement the linearisation at zero is stable for every transmission rate while an established formation at 0.854 persists above a critical seed of 0.146. The construct prices a stipulated mechanism and measures no real movement. What it establishes is that an epistemic system should be judged by how fast a claim can be brought to decision rather than by how effectively organised claims can be suppressed.
+status: published
+abstract: A recurring proposal in political epistemology holds that a society should make organised falsehood
+  non-reproducing, keeping the reproduction number of a belief formation below one while leaving expression
+  free, and relies on interventions that act only on processes such as recruitment and organisation. We
+  model a claim-centred formation as a two-type branching process over active transmitters and organisational
+  units, with lifetime offspring matrix $K$ and reproduction number $\mathcal{R}_F = \rho(K) = 1.856918$
+  in the baseline architecture. Because truth is not an argument of $K$, every content-neutral intervention
+  changes $\log \mathcal{R}_F$ identically for refuted and vindicable formations with the same architecture;
+  the computed discrepancy is zero across four levers and three intensities. The plausible architectural
+  asymmetry, a larger organisational channel in the refuted formation, lowers the discrimination index
+  of uniform friction from $0.199$ to $0.068$. We add a third fate, absorption into general infrastructure,
+  which is open only to true claims and whose rate can be raised without knowing which claims are true.
+  At matched suppression of refuted formations, friction, deplatforming and correction lower the vindicable
+  claim's absorption probability from $0.4985$ to between $0.3255$ and $0.360$, while raised absorptive
+  capacity increases it to $0.820$. Demonetisation cannot reach the target, because the transmitter-to-transmitter
+  entry of $K$, with elasticity $0.739597$, exceeds one on its own. Under reinforcement the origin is
+  stable for every transmission rate, yet an established formation persists at $0.854$ above a critical
+  seed of $0.146$. Within this stipulated construct, which measures no real movement, the quantity an
+  epistemic system should maximise is the rate at which claims are brought to decision.
+web_blurb: Content-neutral interventions on a belief formation's reproduction number act identically on
+  true and false claims. Raising the rate at which claims are decisively tested suppresses refuted formations
+  while raising the absorption of vindicable ones.

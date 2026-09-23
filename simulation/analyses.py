@@ -294,6 +294,9 @@ def analysis_matched_suppression() -> dict:
         "policies": rows,
         "generations": GEN,
         "replicates": REPS,
+        # Largest binomial standard error of any single terminal probability
+        # estimated from REPS replicates (attained at p = 0.5).
+        "mc_standard_error_max": round((0.25 / REPS) ** 0.5, 6),
     }
 
 
@@ -410,9 +413,18 @@ def invariants(res: dict) -> dict:
     checks = {
         "non_discrimination_exact": nd["max_discrepancy_dlogR"] < 1e-12,
         "elasticities_sum_to_one": abs(sum(nd["elasticities"].values()) - 1.0) < 1e-5,
+        # The previous form of this check (p_persist <= 1) was vacuous. The three
+        # terminal probabilities of each recorded baseline must sum to one, and
+        # the two recorded vindicable fates of every policy cannot exceed one.
         "fates_partition": all(
-            abs(v["p_persist_refuted"] + 0.0) <= 1.0 for v in ms["policies"].values()
+            abs(b["p_absorbed"] + b["p_extinct"] + b["p_persist"] - 1.0) < 1e-12
+            for b in (ms["baseline_refuted"], ms["baseline_vindicable"])
+        ) and all(
+            v["p_absorbed_vindicable"] + v["p_extinct_vindicable"] <= 1.0 + 1e-12
+            for v in ms["policies"].values()
         ),
+        "mc_standard_error_bound": abs(
+            ms["mc_standard_error_max"] - (0.25 / ms["replicates"]) ** 0.5) < 1e-6,
         "suppression_matched": max(
             [abs(v["p_persist_refuted"] - ms["suppression_target"])
              for v in ms["policies"].values() if v["reaches_target"]] or [0.0]

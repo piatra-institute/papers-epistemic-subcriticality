@@ -202,7 +202,8 @@
       }
     },
     "generations": 25,
-    "replicates": 4000
+    "replicates": 4000,
+    "mc_standard_error_max": 0.007906
   },
   "absorption_sweep": {
     "rates": [
@@ -326,6 +327,7 @@
     "non_discrimination_exact": true,
     "elasticities_sum_to_one": true,
     "fates_partition": true,
+    "mc_standard_error_bound": true,
     "suppression_matched": true,
     "some_lever_saturates": true,
     "subcritical_seed_below_dies": true,

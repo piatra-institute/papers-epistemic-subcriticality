@@ -1,0 +1,10 @@
+{
+  "manuscript_sha256": "6928bffe80985db237528421baf2171aa46babbaed4e6725c6decf6af1fb1fe7",
+  "full_read": true,
+  "argument_review": true,
+  "structure_review": true,
+  "voice_review": true,
+  "source_review": true,
+  "final_read": true,
+  "notes": "Prose revision against the house standard for plain, declarative scientific writing. The manuscript was reread in full and rewritten paragraph by paragraph with every result, citation, equation, table and figure preserved. Aphoristic section titles were replaced by descriptive ones ('The Safeguard That Does Not Work' became 'Introduction'; 'Truth Is Not an Argument of K' became 'Structural non-discrimination'; 'The Escape That Runs the Wrong Way' became 'Architectural asymmetry and uniform friction'; 'The Transition Every Model Omits' became 'Absorption as a third fate'; 'What Absorptive Capacity Buys' became 'Matched-suppression comparison'; 'Subcriticality Was Never Viability' became 'Invasion threshold and persistence under reinforcement'; 'What the Result Does Not License' was split into 'Limitations' and 'Conclusion'), and a Reproducibility section was added. Removed 'rather than' (17 to 0), self-reference ('this paper', 7 to 0), 'worth', 'exactly/precisely', a reference to the unpublished seed proposal, and rhetorical closers. The abstract was cut from about 520 to 261 words. A general statement was added that rho(K) >= K_TT for nonnegative K, which is why demonetisation saturates, and the closed form of the two reinforcement equilibria is now shown."
+}

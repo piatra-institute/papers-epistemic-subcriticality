@@ -25,7 +25,7 @@ def plot_non_discrimination(res: dict, path: str) -> None:
     ax.set_xticks(x)
     ax.set_xticklabels(levers)
     ax.set_ylabel(r"change in $\log \mathcal{R}_F$")
-    ax.set_title("content-neutral levers at matched intensity: the bars are equal by construction")
+    ax.set_title("change in $\\log \\mathcal{R}_F$ at s = 0.25, equal architecture, opposite truth values", fontsize=10)
     ax.axhline(0, color="k", lw=0.8)
     ax.legend(frameon=False, loc="lower right")
     fig.tight_layout()
@@ -42,22 +42,23 @@ def plot_absorption_frontier(res: dict, path: str) -> None:
     ax.annotate("vindication before intervention", (0.29, base + 0.02),
                 fontsize=8, color=NEUTRAL)
     ax.axvline(ms["suppression_target"], color=NEUTRAL, ls="--", lw=0.8)
-    ax.annotate("matched suppression", (ms["suppression_target"] + 0.004, 0.03),
+    ax.annotate("matched suppression", (ms["suppression_target"] - 0.012, 0.62),
                 fontsize=8, color=NEUTRAL, rotation=90)
-    # The three reaching levers land on the same abscissa by construction, so the
-    # labels are staggered by hand rather than by a solver.
-    offsets = {"friction": (10, -14), "deplatforming": (10, 2), "correction": (10, -30),
-               "demonetisation": (-10, 10), "absorptivity": (10, -4)}
-    aligns = {"demonetisation": "right"}
+    # The three reaching levers land on the same abscissa by construction, so
+    # their labels are placed to the right in data coordinates with leader lines.
+    label_at = {"deplatforming": (0.40, 0.42), "correction": (0.40, 0.33),
+                "friction": (0.40, 0.24), "demonetisation": (0.56, 0.58),
+                "absorptivity": (0.38, 0.82)}
     for name, r in ms["policies"].items():
         colour = ABSORB if name == "absorptivity" else REFUTED
-        ax.scatter(r["p_persist_refuted"], r["p_absorbed_vindicable"], s=70, color=colour, zorder=3)
-        ax.annotate(name, (r["p_persist_refuted"], r["p_absorbed_vindicable"]),
-                    xytext=offsets.get(name, (6, -4)), textcoords="offset points",
-                    fontsize=9, ha=aligns.get(name, "left"))
+        xy = (r["p_persist_refuted"], r["p_absorbed_vindicable"])
+        ax.scatter(*xy, s=40, color=colour, zorder=3)
+        ax.annotate(f"{name} ({r['p_absorbed_vindicable']:.4f})", xy,
+                    xytext=label_at[name], textcoords="data", fontsize=9,
+                    va="center", arrowprops=dict(arrowstyle="-", color=NEUTRAL, lw=0.6))
     ax.set_xlabel("probability the refuted formation persists (matched across policies)")
     ax.set_ylabel("probability the vindicable claim is absorbed")
-    ax.set_title("at equal suppression, only absorptive capacity leaves vindication intact")
+    ax.set_title("vindicable absorption under each policy at matched refuted persistence")
     ax.set_ylim(0, 1.02)
     fig.tight_layout()
     fig.savefig(path, dpi=200)
@@ -82,7 +83,7 @@ def plot_subcritical_persistence(res: dict, path: str) -> None:
                 textcoords="offset points", fontsize=9, ha="center")
     ax.set_xlabel("prevalence $y$")
     ax.set_ylabel(r"$\dot y$")
-    ax.set_title("subcritical at the origin for every transmission rate, and bistable anyway")
+    ax.set_title("reinforcement model, $\\delta = 0.2$, $\\beta = 1.6$", fontsize=10)
     fig.tight_layout()
     fig.savefig(path, dpi=200)
     plt.close(fig)
