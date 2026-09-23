@@ -1,0 +1,473 @@
+# CSL references with stable IDs; cite with Pandoc [@id] syntax.
+# Migrated from the legacy inline bibliography. Entries with a DOI were resolved through doi.org
+# content negotiation (CSL-JSON) and checked for year and title; others were matched in Crossref
+# or entered by hand. Provenance per entry is in sources.md.
+references:
+- id: bettencourt2006
+  type: article-journal
+  title: 'The power of a good idea: Quantitative modeling of the spread of ideas from epidemiological
+    models'
+  author:
+  - given: Luís M.A.
+    family: Bettencourt
+  - given: Ariel
+    family: Cintrón-Arias
+  - given: David I.
+    family: Kaiser
+  - given: Carlos
+    family: Castillo-Chávez
+  container-title: 'Physica A: Statistical Mechanics and its Applications'
+  volume: '364'
+  page: 513-536
+  DOI: 10.1016/j.physa.2005.08.083
+  issued:
+    date-parts:
+    - - 2006
+- id: brooks2025
+  type: article-journal
+  title: An “opinion reproduction number” for infodemics in a bounded-confidence content-spreading process
+    on networks
+  author:
+  - given: Heather Z.
+    family: Brooks
+  - given: Mason A.
+    family: Porter
+  container-title: 'Chaos: An Interdisciplinary Journal of Nonlinear Science'
+  volume: '35'
+  issue: '1'
+  DOI: 10.1063/5.0206431
+  issued:
+    date-parts:
+    - - 2025
+  page: '013160'
+- id: centola2010
+  type: article-journal
+  title: The Spread of Behavior in an Online Social Network Experiment
+  author:
+  - given: Damon
+    family: Centola
+  container-title: Science
+  volume: '329'
+  issue: '5996'
+  page: 1194-1197
+  DOI: 10.1126/science.1185231
+  issued:
+    date-parts:
+    - - 2010
+- id: centola2007
+  type: article-journal
+  title: Complex Contagions and the Weakness of Long Ties
+  author:
+  - given: Damon
+    family: Centola
+  - given: Michael
+    family: Macy
+  container-title: American Journal of Sociology
+  volume: '113'
+  issue: '3'
+  page: 702-734
+  DOI: 10.1086/521848
+  issued:
+    date-parts:
+    - - 2007
+- id: costello2024
+  type: article-journal
+  title: Durably reducing conspiracy beliefs through dialogues with AI
+  author:
+  - given: Thomas H.
+    family: Costello
+  - given: Gordon
+    family: Pennycook
+  - given: David G.
+    family: Rand
+  container-title: Science
+  volume: '385'
+  issue: '6714'
+  DOI: 10.1126/science.adq1814
+  URL: http://dx.doi.org/10.1126/science.adq1814
+  issued:
+    date-parts:
+    - - 2024
+  page: eadq1814
+- id: diekmann2010
+  type: article-journal
+  title: The construction of next-generation matrices for compartmental epidemic models
+  author:
+  - given: O.
+    family: Diekmann
+  - given: J. A. P.
+    family: Heesterbeek
+  - given: M. G.
+    family: Roberts
+  container-title: Journal of The Royal Society Interface
+  volume: '7'
+  issue: '47'
+  page: 873-885
+  DOI: 10.1098/rsif.2009.0386
+  URL: http://dx.doi.org/10.1098/rsif.2009.0386
+  issued:
+    date-parts:
+    - - 2010
+- id: dotson2014
+  type: article-journal
+  title: Conceptualizing Epistemic Oppression
+  author:
+  - given: Kristie
+    family: Dotson
+  container-title: Social Epistemology
+  volume: '28'
+  issue: '2'
+  page: 115-138
+  DOI: 10.1080/02691728.2013.782585
+  issued:
+    date-parts:
+    - - 2014
+- id: fricker2007
+  type: book
+  title: 'Epistemic Injustice: Power and the Ethics of Knowing'
+  author:
+  - given: Miranda
+    family: Fricker
+  publisher: Oxford University Press
+  DOI: 10.1093/acprof:oso/9780198237907.001.0001
+  URL: http://dx.doi.org/10.1093/acprof:oso/9780198237907.001.0001
+  issued:
+    date-parts:
+    - - 2007
+  publisher-place: Oxford
+- id: granovetter1978
+  type: article-journal
+  title: Threshold Models of Collective Behavior
+  author:
+  - given: Mark
+    family: Granovetter
+  container-title: American Journal of Sociology
+  volume: '83'
+  issue: '6'
+  page: 1420-1443
+  DOI: 10.1086/226707
+  issued:
+    date-parts:
+    - - 1978
+- id: hoes2024
+  type: article-journal
+  title: Prominent misinformation interventions reduce misperceptions but increase scepticism
+  author:
+  - given: Emma
+    family: Hoes
+  - given: Brian
+    family: Aitken
+  - given: Jingwen
+    family: Zhang
+  - given: Tomasz
+    family: Gackowski
+  - given: Magdalena
+    family: Wojcieszak
+  container-title: Nature Human Behaviour
+  volume: '8'
+  issue: '8'
+  page: 1545-1553
+  DOI: 10.1038/s41562-024-01884-x
+  URL: http://dx.doi.org/10.1038/s41562-024-01884-x
+  issued:
+    date-parts:
+    - - 2024
+- id: lakatos1970
+  type: chapter
+  title: Falsification and the Methodology of Scientific Research Programmes
+  author:
+  - given: I.
+    family: Lakatos
+  container-title: Criticism and the Growth of Knowledge
+  page: 91-196
+  publisher: Cambridge University Press
+  DOI: 10.1017/cbo9781139171434.009
+  issued:
+    date-parts:
+    - - 1970
+  editor:
+  - given: Imre
+    family: Lakatos
+  - given: Alan
+    family: Musgrave
+  publisher-place: Cambridge
+- id: lu2023
+  type: article-journal
+  title: 'Psychological Inoculation for Credibility Assessment, Sharing Intention, and Discernment of
+    Misinformation: Systematic Review and Meta-Analysis'
+  author:
+  - given: Chang
+    family: Lu
+  - given: Bo
+    family: Hu
+  - given: Qiang
+    family: Li
+  - given: Chao
+    family: Bi
+  - given: Xing-Da
+    family: Ju
+  container-title: Journal of Medical Internet Research
+  volume: '25'
+  page: e49255
+  DOI: 10.2196/49255
+  issued:
+    date-parts:
+    - - 2023
+- id: marshall1984
+  type: article-journal
+  title: Unidentified curved bacilli in the stomach of patients with gastritis and peptic ulceration
+  author:
+  - given: Barry J.
+    family: Marshall
+  - given: J. Robin
+    family: Warren
+  container-title: The Lancet
+  volume: '323'
+  issue: '8390'
+  page: 1311-1315
+  DOI: 10.1016/s0140-6736(84)91816-6
+  URL: http://dx.doi.org/10.1016/S0140-6736(84)91816-6
+  issued:
+    date-parts:
+    - - 1984
+- id: mccarthy1977
+  type: article-journal
+  title: 'Resource Mobilization and Social Movements: A Partial Theory'
+  author:
+  - given: John D.
+    family: McCarthy
+  - given: Mayer N.
+    family: Zald
+  container-title: American Journal of Sociology
+  volume: '82'
+  issue: '6'
+  page: 1212-1241
+  DOI: 10.1086/226464
+  issued:
+    date-parts:
+    - - 1977
+- id: pahuus2024
+  type: article-journal
+  title: 'Toward a Cultural Psychology of Conspiracy Theories: A life-narrative analysis of Flat Earthers'
+  author:
+  - given: Kirstine
+    family: Pahuus
+  - given: Maja Sødinge
+    family: Jørgensen
+  - given: Brady
+    family: Wagoner
+  container-title: Integrative Psychological and Behavioral Science
+  volume: '58'
+  issue: '4'
+  page: 1895-1913
+  DOI: 10.1007/s12124-024-09857-5
+  issued:
+    date-parts:
+    - - 2024
+- id: paolillo2018
+  type: article-journal
+  title: The Flat Earth phenomenon on YouTube
+  author:
+  - given: John C.
+    family: Paolillo
+  container-title: First Monday
+  DOI: 10.5210/fm.v23i12.8251
+  URL: http://dx.doi.org/10.5210/fm.v23i12.8251
+  issued:
+    date-parts:
+    - - 2018
+  volume: '23'
+  issue: '12'
+- id: pilati2024
+  type: article-journal
+  title: 'Pseudo-scientific versus anti-scientific online conspiracism: A comparison of the Flat Earth
+    Society’s Internet forum and Reddit'
+  author:
+  - given: Federico
+    family: Pilati
+  - given: Tommaso
+    family: Venturini
+  - given: Pier Luigi
+    family: Sacco
+  - given: Floriana
+    family: Gargiulo
+  container-title: New Media & Society
+  volume: '27'
+  issue: '9'
+  page: 5324-5341
+  DOI: 10.1177/14614448241252593
+  issued:
+    date-parts:
+    - - 2024
+- id: polletta2001
+  type: article-journal
+  title: Collective Identity and Social Movements
+  author:
+  - given: Francesca
+    family: Polletta
+  - given: James M.
+    family: Jasper
+  container-title: Annual Review of Sociology
+  volume: '27'
+  issue: '1'
+  page: 283-305
+  DOI: 10.1146/annurev.soc.27.1.283
+  URL: http://dx.doi.org/10.1146/annurev.soc.27.1.283
+  issued:
+    date-parts:
+    - - 2001
+- id: prusiner1982
+  type: article-journal
+  title: Novel Proteinaceous Infectious Particles Cause Scrapie
+  author:
+  - given: Stanley B.
+    family: Prusiner
+  container-title: Science
+  volume: '216'
+  issue: '4542'
+  page: 136-144
+  DOI: 10.1126/science.6801762
+  issued:
+    date-parts:
+    - - 1982
+- id: sperber1985
+  type: article-journal
+  title: 'Anthropology and Psychology: Towards an Epidemiology of Representations'
+  author:
+  - given: Dan
+    family: Sperber
+  container-title: Man
+  volume: '20'
+  issue: '1'
+  page: 73-89
+  DOI: 10.2307/2802222
+  URL: http://dx.doi.org/10.2307/2802222
+  issued:
+    date-parts:
+    - - 1985
+- id: taylor1989
+  type: article-journal
+  title: 'Social Movement Continuity: The Women''s Movement in Abeyance'
+  author:
+  - given: Verta
+    family: Taylor
+  container-title: American Sociological Review
+  volume: '54'
+  issue: '5'
+  page: 761-775
+  DOI: 10.2307/2117752
+  issued:
+    date-parts:
+    - - 1989
+- id: thorp2026
+  type: article-journal
+  title: Editorial Expression of Concern
+  author:
+  - given: H. Holden
+    family: Thorp
+  container-title: Science
+  volume: '392'
+  issue: '6803'
+  page: 1131
+  DOI: 10.1126/science.aej2383
+  URL: http://dx.doi.org/10.1126/science.aej2383
+  issued:
+    date-parts:
+    - - 2026
+- id: driessche2002
+  type: article-journal
+  title: Reproduction numbers and sub-threshold endemic equilibria for compartmental models of disease
+    transmission
+  author:
+  - given: P.
+    family: van den Driessche
+  - given: James
+    family: Watmough
+  container-title: Mathematical Biosciences
+  volume: '180'
+  issue: 1-2
+  page: 29-48
+  DOI: 10.1016/s0025-5564(02)00108-6
+  issued:
+    date-parts:
+    - - 2002
+- id: vine1963
+  type: article-journal
+  title: Magnetic Anomalies Over Oceanic Ridges
+  author:
+  - given: F. J.
+    family: Vine
+  - given: D. H.
+    family: Matthews
+  container-title: Nature
+  volume: '199'
+  issue: '4897'
+  page: 947-949
+  DOI: 10.1038/199947a0
+  URL: http://dx.doi.org/10.1038/199947a0
+  issued:
+    date-parts:
+    - - 1963
+- id: walter2019
+  type: article-journal
+  title: 'Fact-Checking: A Meta-Analysis of What Works and for Whom'
+  author:
+  - given: Nathan
+    family: Walter
+  - given: Jonathan
+    family: Cohen
+  - given: R. Lance
+    family: Holbert
+  - given: Yasmin
+    family: Morag
+  container-title: Political Communication
+  volume: '37'
+  issue: '3'
+  page: 350-375
+  DOI: 10.1080/10584609.2019.1668894
+  issued:
+    date-parts:
+    - - 2019
+- id: watts2002
+  type: article-journal
+  title: A simple model of global cascades on random networks
+  author:
+  - given: Duncan J.
+    family: Watts
+  container-title: Proceedings of the National Academy of Sciences
+  volume: '99'
+  issue: '9'
+  page: 5766-5771
+  DOI: 10.1073/pnas.082090499
+  URL: http://dx.doi.org/10.1073/pnas.082090499
+  issued:
+    date-parts:
+    - - 2002
+- id: wynne1992
+  type: article-journal
+  title: 'Misunderstood misunderstanding: social identities and public uptake of science'
+  author:
+  - given: Brian
+    family: Wynne
+  container-title: Public Understanding of Science
+  volume: '1'
+  issue: '3'
+  page: 281-304
+  DOI: 10.1088/0963-6625/1/3/004
+  issued:
+    date-parts:
+    - - 1992
+- id: yee2025
+  type: article-journal
+  title: The limits of epidemiological models of misinformation
+  author:
+  - given: Adrian K.
+    family: Yee
+  container-title: Synthese
+  volume: '206'
+  issue: '3'
+  DOI: 10.1007/s11229-025-05246-6
+  issued:
+    date-parts:
+    - - 2025
+  page: 158

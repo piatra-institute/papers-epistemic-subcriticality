@@ -3,6 +3,16 @@
 Dated log of editorial passes and verification runs. Newest first.
 See the workspace docs (run `papers docs`): writing-pipeline.md §7 and refresh-pipeline.md.
 
+## 2026-09-23 — structured-evidence migration
+
+Structured-evidence migration (references and claims).
+- references.yaml: 28 CSL entries, all with DOIs resolved through doi.org content negotiation. 17 were matched automatically in Crossref; costello2024, diekmann2010, fricker2007, hoes2024, marshall1984, paolillo2018, polletta2001, sperber1985, thorp2026, vine1963 and watts2002 were matched by hand to their DOI records. Completed from the records: editors (Lakatos and Musgrave) and publisher for lakatos1970, page ranges for sperber1985 and taylor1989, article numbers for brooks2025, costello2024 and yee2025. In-text author-year citations converted to Pandoc [@id] syntax; the legacy reference list replaced by the citeproc-rendered list (Chicago author-date).
+- Correction: hoes2024 was listed with three authors (Hoes, Aitken, Zhang); the DOI record 10.1038/s41562-024-01884-x adds Gackowski and Wojcieszak. lu2023 was listed with three authors (Lu, Hu, Li); the DOI record 10.2196/49255 adds Bi and Ju. The rendered citations are "Hoes et al." and "Lu et al."; sources.md updated.
+- claims.yaml: 130 claims (92 computation, 18 source, 4 definition, 5 assumption, 9 interpretation, 2 normative). Every simulation number in the abstract, body and matched-suppression table is bound to simulation/output/results.json; the 28-35 per cent loss range is bound as an interpretation derived from the table values. Source claims checked against Crossref, OpenAlex or Semantic Scholar abstracts, the arXiv full text for Bettencourt et al., and Crossref update metadata linking the Thorp expression of concern to Costello et al.; the van den Driessche and Watmough claim rests on the record's title.
+- Not bound (no retrievable abstract or support beyond the record): Sperber's caution that representations transform in transmission; Yee's framing of ontology as the point where transfers usually fail; the historical absorption episodes (vine1963, marshall1984, prusiner1982); Lakatos's procedural criterion; the supporting citations to fricker2007, dotson2014, wynne1992, polletta2001 and granovetter1978.
+- Execution receipt: run id subcriticality (uv run python run_all.py); results.json reproduced byte for byte.
+- metadata claims_target: claim-ledger.
+
 ## 2026-09-23 — prose revision
 
 Prose revision against the house standard.

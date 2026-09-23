@@ -1,0 +1,1406 @@
+schema: 1
+coverage: reviewed
+reviewed_manuscript_sha256: f47b0d6f93d7b34df9b229b06a80b7ea13993e85abc52b72b14c6d43ce908051
+claims:
+- id: abs-rf
+  kind: computation
+  passage: We model a claim-centred formation as a two-type branching process over active transmitters
+    and organisational units, with lifetime offspring matrix $K$ and reproduction number $\mathcal{R}_F
+    = \rho(K) = 1.856918$ in the baseline architecture.
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /non_discrimination/R_F_baseline
+    reported: '1.856918'
+    units: spectral radius of the offspring matrix
+    conditions: baseline stipulated architecture (Section 2)
+    decimals: 6
+- id: abs-disc-r1
+  kind: computation
+  passage: The plausible architectural asymmetry, a larger organisational channel in the refuted formation,
+    lowers the discrimination index of uniform friction from $0.199$ to $0.068$.
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /architecture_asymmetry/sweep/ratio=1.0/discrimination
+    reported: '0.199'
+    units: discrimination index
+    conditions: uniform friction 0.3, organisational ratio 1
+    decimals: 3
+- id: abs-disc-r4
+  kind: computation
+  passage: The plausible architectural asymmetry, a larger organisational channel in the refuted formation,
+    lowers the discrimination index of uniform friction from $0.199$ to $0.068$.
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /architecture_asymmetry/sweep/ratio=4.0/discrimination
+    reported: '0.068'
+    units: discrimination index
+    conditions: uniform friction 0.3, organisational ratio 4
+    decimals: 3
+- id: abs-base-abs
+  kind: computation
+  passage: At matched suppression of refuted formations, friction, deplatforming and correction lower
+    the vindicable claim's absorption probability from $0.4985$ to between $0.3255$ and $0.360$, while
+    raised absorptive capacity increases it to $0.820$.
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /matched_suppression/baseline_vindicable/p_absorbed
+    reported: '0.4985'
+    units: probability
+    conditions: 'matched suppression: 25 generations, 4,000 replicates, common random numbers, seed 20260730'
+    decimals: 4
+- id: abs-fric-abs
+  kind: computation
+  passage: At matched suppression of refuted formations, friction, deplatforming and correction lower
+    the vindicable claim's absorption probability from $0.4985$ to between $0.3255$ and $0.360$, while
+    raised absorptive capacity increases it to $0.820$.
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /matched_suppression/policies/friction/p_absorbed_vindicable
+    reported: '0.3255'
+    units: probability
+    conditions: 'matched suppression: 25 generations, 4,000 replicates, common random numbers, seed 20260730'
+    decimals: 4
+- id: abs-depl-abs
+  kind: computation
+  passage: At matched suppression of refuted formations, friction, deplatforming and correction lower
+    the vindicable claim's absorption probability from $0.4985$ to between $0.3255$ and $0.360$, while
+    raised absorptive capacity increases it to $0.820$.
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /matched_suppression/policies/deplatforming/p_absorbed_vindicable
+    reported: '0.360'
+    units: probability
+    conditions: 'matched suppression: 25 generations, 4,000 replicates, common random numbers, seed 20260730'
+    decimals: 3
+- id: abs-absorp-abs
+  kind: computation
+  passage: At matched suppression of refuted formations, friction, deplatforming and correction lower
+    the vindicable claim's absorption probability from $0.4985$ to between $0.3255$ and $0.360$, while
+    raised absorptive capacity increases it to $0.820$.
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /matched_suppression/policies/absorptivity/p_absorbed_vindicable
+    reported: '0.820'
+    units: probability
+    conditions: 'matched suppression: 25 generations, 4,000 replicates, common random numbers, seed 20260730'
+    decimals: 3
+- id: abs-elast-tt
+  kind: computation
+  passage: Demonetisation cannot reach the target, because the transmitter-to-transmitter entry of $K$,
+    with elasticity $0.739597$, exceeds one on its own.
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /non_discrimination/elasticities/TT
+    reported: '0.739597'
+    units: share of total elasticity
+    conditions: baseline stipulated architecture (Section 2)
+    decimals: 6
+- id: abs-established
+  kind: computation
+  passage: Under reinforcement the origin is stable for every transmission rate, yet an established formation
+    persists at $0.854$ above a critical seed of $0.146$.
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /subcritical_persistence/established_equilibrium
+    reported: '0.854'
+    units: prevalence
+    conditions: delta 0.2, beta 1.6
+    decimals: 3
+- id: abs-critical
+  kind: computation
+  passage: Under reinforcement the origin is stable for every transmission rate, yet an established formation
+    persists at $0.854$ above a critical seed of $0.146$.
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /subcritical_persistence/critical_seed
+    reported: '0.146'
+    units: prevalence
+    conditions: delta 0.2, beta 1.6
+    decimals: 3
+- id: q-baseline
+  kind: computation
+  passage: With $\alpha = 0.5$, $r_A = 1.0$, $\tau = 0.4$ and $r_I = 0.6$ the survival probability is
+    $q = 0.133333$; with $\beta_T = 6.0$, $\mu_T = 0.5$, $\beta_O = 9.0$, $\mu_O = 0.3$, $\kappa = 0.05$
+    and $\nu = 0.09$ the offspring matrix is
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /non_discrimination/q_baseline
+    reported: '0.133333'
+    units: probability
+    conditions: baseline stipulated architecture (Section 2)
+    decimals: 6
+- id: k-tt
+  kind: computation
+  passage: $$K = \begin{bmatrix} 1.6 & 4.0 \\ 0.1 & 0.3 \end{bmatrix}, \qquad \mathcal{R}_F = 1.856918,$$
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /non_discrimination/K_baseline/0/0
+    reported: '1.6'
+    units: offspring per lifetime
+    conditions: baseline stipulated architecture (Section 2)
+    decimals: 1
+- id: k-to
+  kind: computation
+  passage: $$K = \begin{bmatrix} 1.6 & 4.0 \\ 0.1 & 0.3 \end{bmatrix}, \qquad \mathcal{R}_F = 1.856918,$$
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /non_discrimination/K_baseline/0/1
+    reported: '4.0'
+    units: offspring per lifetime
+    conditions: baseline stipulated architecture (Section 2)
+    decimals: 1
+- id: k-ot
+  kind: computation
+  passage: $$K = \begin{bmatrix} 1.6 & 4.0 \\ 0.1 & 0.3 \end{bmatrix}, \qquad \mathcal{R}_F = 1.856918,$$
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /non_discrimination/K_baseline/1/0
+    reported: '0.1'
+    units: offspring per lifetime
+    conditions: baseline stipulated architecture (Section 2)
+    decimals: 1
+- id: k-oo
+  kind: computation
+  passage: $$K = \begin{bmatrix} 1.6 & 4.0 \\ 0.1 & 0.3 \end{bmatrix}, \qquad \mathcal{R}_F = 1.856918,$$
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /non_discrimination/K_baseline/1/1
+    reported: '0.3'
+    units: offspring per lifetime
+    conditions: baseline stipulated architecture (Section 2)
+    decimals: 1
+- id: k-rf
+  kind: computation
+  passage: $$K = \begin{bmatrix} 1.6 & 4.0 \\ 0.1 & 0.3 \end{bmatrix}, \qquad \mathcal{R}_F = 1.856918,$$
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /non_discrimination/R_F_baseline
+    reported: '1.856918'
+    units: spectral radius
+    conditions: baseline stipulated architecture (Section 2)
+    decimals: 6
+- id: max-discrepancy
+  kind: computation
+  passage: The maximum discrepancy between the two formations' changes in $\log \mathcal{R}_F$ is identically
+    $0$, which certifies the identity and does not approximate it.
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /non_discrimination/max_discrepancy_dlogR
+    reported: '0'
+    units: absolute difference in change of log R_F
+    conditions: four levers at intensities 0.1, 0.25, 0.5
+    decimals: 0
+- id: dlog-depl
+  kind: computation
+  passage: At $s = 0.25$ deplatforming changes $\log \mathcal{R}_F$ by $-0.287682$, friction by $-0.196131$,
+    correction by $-0.169545$ and demonetisation by $-0.03586$.
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /non_discrimination/levers/deplatforming/s=0.25/dlogR_refuted
+    reported: '-0.287682'
+    units: change in log R_F
+    conditions: intensity 0.25, baseline architecture
+    decimals: 6
+- id: dlog-fric
+  kind: computation
+  passage: At $s = 0.25$ deplatforming changes $\log \mathcal{R}_F$ by $-0.287682$, friction by $-0.196131$,
+    correction by $-0.169545$ and demonetisation by $-0.03586$.
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /non_discrimination/levers/friction/s=0.25/dlogR_refuted
+    reported: '-0.196131'
+    units: change in log R_F
+    conditions: intensity 0.25, baseline architecture
+    decimals: 6
+- id: dlog-corr
+  kind: computation
+  passage: At $s = 0.25$ deplatforming changes $\log \mathcal{R}_F$ by $-0.287682$, friction by $-0.196131$,
+    correction by $-0.169545$ and demonetisation by $-0.03586$.
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /non_discrimination/levers/correction/s=0.25/dlogR_refuted
+    reported: '-0.169545'
+    units: change in log R_F
+    conditions: intensity 0.25, baseline architecture
+    decimals: 6
+- id: dlog-demon
+  kind: computation
+  passage: At $s = 0.25$ deplatforming changes $\log \mathcal{R}_F$ by $-0.287682$, friction by $-0.196131$,
+    correction by $-0.169545$ and demonetisation by $-0.03586$.
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /non_discrimination/levers/demonetisation/s=0.25/dlogR_refuted
+    reported: '-0.03586'
+    units: change in log R_F
+    conditions: intensity 0.25, baseline architecture
+    decimals: 5
+- id: elast-tt
+  kind: computation
+  passage: 'The ordering follows from the elasticities of $\mathcal{R}_F$ to the entries of $K$, computed
+    from the Perron eigenvectors: the transmitter-to-transmitter entry carries $0.739597$ of the total
+    elasticity, each cross entry $0.118760$, and the organisation-to-organisation entry $0.022884$.'
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /non_discrimination/elasticities/TT
+    reported: '0.739597'
+    units: share of total elasticity
+    conditions: baseline stipulated architecture (Section 2)
+    decimals: 6
+- id: elast-to
+  kind: computation
+  passage: 'The ordering follows from the elasticities of $\mathcal{R}_F$ to the entries of $K$, computed
+    from the Perron eigenvectors: the transmitter-to-transmitter entry carries $0.739597$ of the total
+    elasticity, each cross entry $0.118760$, and the organisation-to-organisation entry $0.022884$.'
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /non_discrimination/elasticities/TO
+    reported: '0.118760'
+    units: share of total elasticity
+    conditions: baseline stipulated architecture (Section 2)
+    decimals: 6
+- id: elast-oo
+  kind: computation
+  passage: 'The ordering follows from the elasticities of $\mathcal{R}_F$ to the entries of $K$, computed
+    from the Perron eigenvectors: the transmitter-to-transmitter entry carries $0.739597$ of the total
+    elasticity, each cross entry $0.118760$, and the organisation-to-organisation entry $0.022884$.'
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /non_discrimination/elasticities/OO
+    reported: '0.022884'
+    units: share of total elasticity
+    conditions: baseline stipulated architecture (Section 2)
+    decimals: 6
+- id: demon-95
+  kind: computation
+  passage: With the organisational channel reduced by $95$ per cent, $\mathcal{R}_F$ remains at $1.612519$,
+    because $K_{TT} = 1.6$ already exceeds one and person-to-person reproduction requires no organisation.
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /matched_suppression/policies/demonetisation/intensity
+    reported: '95'
+    units: percent reduction of organisational channel
+    conditions: admissible maximum
+    decimals: 0
+    scale: 100
+- id: demon-rf
+  kind: computation
+  passage: With the organisational channel reduced by $95$ per cent, $\mathcal{R}_F$ remains at $1.612519$,
+    because $K_{TT} = 1.6$ already exceeds one and person-to-person reproduction requires no organisation.
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /matched_suppression/policies/demonetisation/R_F
+    reported: '1.612519'
+    units: spectral radius
+    conditions: demonetisation at 0.95
+    decimals: 6
+- id: demon-ktt
+  kind: computation
+  passage: With the organisational channel reduced by $95$ per cent, $\mathcal{R}_F$ remains at $1.612519$,
+    because $K_{TT} = 1.6$ already exceeds one and person-to-person reproduction requires no organisation.
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /non_discrimination/K_baseline/0/0
+    reported: '1.6'
+    units: offspring per lifetime
+    conditions: baseline stipulated architecture (Section 2)
+    decimals: 1
+- id: asym-r1-supp
+  kind: computation
+  passage: At ratio $1$, where the architectures coincide, friction suppresses persistence by $0.284$
+    and costs $0.085$ of vindication, a discrimination index of $0.199$.
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /architecture_asymmetry/sweep/ratio=1.0/delta_suppression
+    reported: '0.284'
+    units: fall in persistence probability
+    conditions: friction 0.3, ratio 1
+    decimals: 3
+- id: asym-r1-vind
+  kind: computation
+  passage: At ratio $1$, where the architectures coincide, friction suppresses persistence by $0.284$
+    and costs $0.085$ of vindication, a discrimination index of $0.199$.
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /architecture_asymmetry/sweep/ratio=1.0/delta_vindication
+    reported: '0.085'
+    units: 'fall in vindication probability (sign reversed: reported as a cost)'
+    conditions: friction 0.3, ratio 1
+    decimals: 3
+    scale: -1
+- id: asym-r1-disc
+  kind: computation
+  passage: At ratio $1$, where the architectures coincide, friction suppresses persistence by $0.284$
+    and costs $0.085$ of vindication, a discrimination index of $0.199$.
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /architecture_asymmetry/sweep/ratio=1.0/discrimination
+    reported: '0.199'
+    units: discrimination index
+    conditions: friction 0.3, ratio 1
+    decimals: 3
+- id: asym-r4-supp
+  kind: computation
+  passage: At ratio $4$ it suppresses by $0.256$ and costs $0.1885$, an index of $0.068$.
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /architecture_asymmetry/sweep/ratio=4.0/delta_suppression
+    reported: '0.256'
+    units: fall in persistence probability
+    conditions: friction 0.3, ratio 4
+    decimals: 3
+- id: asym-r4-vind
+  kind: computation
+  passage: At ratio $4$ it suppresses by $0.256$ and costs $0.1885$, an index of $0.068$.
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /architecture_asymmetry/sweep/ratio=4.0/delta_vindication
+    reported: '0.1885'
+    units: 'fall in vindication probability (sign reversed: reported as a cost)'
+    conditions: friction 0.3, ratio 4
+    decimals: 4
+    scale: -1
+- id: asym-r4-disc
+  kind: computation
+  passage: At ratio $4$ it suppresses by $0.256$ and costs $0.1885$, an index of $0.068$.
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /architecture_asymmetry/sweep/ratio=4.0/discrimination
+    reported: '0.068'
+    units: discrimination index
+    conditions: friction 0.3, ratio 4
+    decimals: 3
+- id: generations
+  kind: computation
+  passage: Each run starts from a single seed transmitter and lasts $25$ generations, with $4{,}000$ replicates
+    per condition, so the binomial standard error of any estimated probability is at most $0.0079$.
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /matched_suppression/generations
+    reported: '25'
+    units: generations
+    conditions: 'matched suppression: 25 generations, 4,000 replicates, common random numbers, seed 20260730'
+    decimals: 0
+- id: mc-se
+  kind: computation
+  passage: Each run starts from a single seed transmitter and lasts $25$ generations, with $4{,}000$ replicates
+    per condition, so the binomial standard error of any estimated probability is at most $0.0079$.
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /matched_suppression/mc_standard_error_max
+    reported: '0.0079'
+    units: maximum binomial standard error
+    conditions: 'matched suppression: 25 generations, 4,000 replicates, common random numbers, seed 20260730'
+    decimals: 4
+- id: base-persist
+  kind: computation
+  passage: At baseline the refuted formation persists with probability $0.70825$ and the vindicable claim
+    is absorbed with probability $0.4985$ at absorptive capacity $a = 0.05$.
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /matched_suppression/baseline_refuted/p_persist
+    reported: '0.70825'
+    units: probability
+    conditions: 'matched suppression: 25 generations, 4,000 replicates, common random numbers, seed 20260730'
+    decimals: 5
+- id: base-absorb
+  kind: computation
+  passage: At baseline the refuted formation persists with probability $0.70825$ and the vindicable claim
+    is absorbed with probability $0.4985$ at absorptive capacity $a = 0.05$.
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /matched_suppression/baseline_vindicable/p_absorbed
+    reported: '0.4985'
+    units: probability
+    conditions: 'matched suppression: 25 generations, 4,000 replicates, common random numbers, seed 20260730'
+    decimals: 4
+- id: target
+  kind: computation
+  passage: The target is therefore $0.354125$.
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /matched_suppression/suppression_target
+    reported: '0.354125'
+    units: probability
+    conditions: half the baseline persistence
+    decimals: 6
+- id: tab-friction-intensity
+  kind: computation
+  passage: '| friction | $0.342$ | $1.411860$ | $0.35325$ | $0.3255$ | $-0.1730$ |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /matched_suppression/policies/friction/intensity
+    reported: '0.342'
+    units: lever intensity
+    conditions: 'matched suppression: 25 generations, 4,000 replicates, common random numbers, seed 20260730'
+    decimals: 3
+- id: tab-friction-rf
+  kind: computation
+  passage: '| friction | $0.342$ | $1.411860$ | $0.35325$ | $0.3255$ | $-0.1730$ |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /matched_suppression/policies/friction/R_F
+    reported: '1.411860'
+    units: spectral radius
+    conditions: 'matched suppression: 25 generations, 4,000 replicates, common random numbers, seed 20260730'
+    decimals: 6
+- id: tab-friction-persist
+  kind: computation
+  passage: '| friction | $0.342$ | $1.411860$ | $0.35325$ | $0.3255$ | $-0.1730$ |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /matched_suppression/policies/friction/p_persist_refuted
+    reported: '0.35325'
+    units: probability
+    conditions: 'matched suppression: 25 generations, 4,000 replicates, common random numbers, seed 20260730'
+    decimals: 5
+- id: tab-friction-absorbed
+  kind: computation
+  passage: '| friction | $0.342$ | $1.411860$ | $0.35325$ | $0.3255$ | $-0.1730$ |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /matched_suppression/policies/friction/p_absorbed_vindicable
+    reported: '0.3255'
+    units: probability
+    conditions: 'matched suppression: 25 generations, 4,000 replicates, common random numbers, seed 20260730'
+    decimals: 4
+- id: tab-friction-dvind
+  kind: computation
+  passage: '| friction | $0.342$ | $1.411860$ | $0.35325$ | $0.3255$ | $-0.1730$ |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /matched_suppression/policies/friction/delta_vindication
+    reported: '-0.1730'
+    units: change in absorption probability
+    conditions: 'matched suppression: 25 generations, 4,000 replicates, common random numbers, seed 20260730'
+    decimals: 4
+- id: tab-deplatforming-intensity
+  kind: computation
+  passage: '| deplatforming | $0.277$ | $1.342748$ | $0.35500$ | $0.3600$ | $-0.1385$ |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /matched_suppression/policies/deplatforming/intensity
+    reported: '0.277'
+    units: lever intensity
+    conditions: 'matched suppression: 25 generations, 4,000 replicates, common random numbers, seed 20260730'
+    decimals: 3
+- id: tab-deplatforming-rf
+  kind: computation
+  passage: '| deplatforming | $0.277$ | $1.342748$ | $0.35500$ | $0.3600$ | $-0.1385$ |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /matched_suppression/policies/deplatforming/R_F
+    reported: '1.342748'
+    units: spectral radius
+    conditions: 'matched suppression: 25 generations, 4,000 replicates, common random numbers, seed 20260730'
+    decimals: 6
+- id: tab-deplatforming-persist
+  kind: computation
+  passage: '| deplatforming | $0.277$ | $1.342748$ | $0.35500$ | $0.3600$ | $-0.1385$ |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /matched_suppression/policies/deplatforming/p_persist_refuted
+    reported: '0.35500'
+    units: probability
+    conditions: 'matched suppression: 25 generations, 4,000 replicates, common random numbers, seed 20260730'
+    decimals: 5
+- id: tab-deplatforming-absorbed
+  kind: computation
+  passage: '| deplatforming | $0.277$ | $1.342748$ | $0.35500$ | $0.3600$ | $-0.1385$ |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /matched_suppression/policies/deplatforming/p_absorbed_vindicable
+    reported: '0.3600'
+    units: probability
+    conditions: 'matched suppression: 25 generations, 4,000 replicates, common random numbers, seed 20260730'
+    decimals: 4
+- id: tab-deplatforming-dvind
+  kind: computation
+  passage: '| deplatforming | $0.277$ | $1.342748$ | $0.35500$ | $0.3600$ | $-0.1385$ |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /matched_suppression/policies/deplatforming/delta_vindication
+    reported: '-0.1385'
+    units: change in absorption probability
+    conditions: 'matched suppression: 25 generations, 4,000 replicates, common random numbers, seed 20260730'
+    decimals: 4
+- id: tab-correction-intensity
+  kind: computation
+  passage: '| correction | $0.403$ | $1.363508$ | $0.35450$ | $0.3570$ | $-0.1415$ |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /matched_suppression/policies/correction/intensity
+    reported: '0.403'
+    units: lever intensity
+    conditions: 'matched suppression: 25 generations, 4,000 replicates, common random numbers, seed 20260730'
+    decimals: 3
+- id: tab-correction-rf
+  kind: computation
+  passage: '| correction | $0.403$ | $1.363508$ | $0.35450$ | $0.3570$ | $-0.1415$ |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /matched_suppression/policies/correction/R_F
+    reported: '1.363508'
+    units: spectral radius
+    conditions: 'matched suppression: 25 generations, 4,000 replicates, common random numbers, seed 20260730'
+    decimals: 6
+- id: tab-correction-persist
+  kind: computation
+  passage: '| correction | $0.403$ | $1.363508$ | $0.35450$ | $0.3570$ | $-0.1415$ |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /matched_suppression/policies/correction/p_persist_refuted
+    reported: '0.35450'
+    units: probability
+    conditions: 'matched suppression: 25 generations, 4,000 replicates, common random numbers, seed 20260730'
+    decimals: 5
+- id: tab-correction-absorbed
+  kind: computation
+  passage: '| correction | $0.403$ | $1.363508$ | $0.35450$ | $0.3570$ | $-0.1415$ |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /matched_suppression/policies/correction/p_absorbed_vindicable
+    reported: '0.3570'
+    units: probability
+    conditions: 'matched suppression: 25 generations, 4,000 replicates, common random numbers, seed 20260730'
+    decimals: 4
+- id: tab-correction-dvind
+  kind: computation
+  passage: '| correction | $0.403$ | $1.363508$ | $0.35450$ | $0.3570$ | $-0.1415$ |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /matched_suppression/policies/correction/delta_vindication
+    reported: '-0.1415'
+    units: change in absorption probability
+    conditions: 'matched suppression: 25 generations, 4,000 replicates, common random numbers, seed 20260730'
+    decimals: 4
+- id: tab-demonetisation-intensity
+  kind: computation
+  passage: '| demonetisation | $0.950$ | $1.612519$ | $0.63050$ | $0.5050$ | $+0.0065$ |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /matched_suppression/policies/demonetisation/intensity
+    reported: '0.950'
+    units: lever intensity
+    conditions: 'matched suppression: 25 generations, 4,000 replicates, common random numbers, seed 20260730'
+    decimals: 3
+- id: tab-demonetisation-rf
+  kind: computation
+  passage: '| demonetisation | $0.950$ | $1.612519$ | $0.63050$ | $0.5050$ | $+0.0065$ |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /matched_suppression/policies/demonetisation/R_F
+    reported: '1.612519'
+    units: spectral radius
+    conditions: 'matched suppression: 25 generations, 4,000 replicates, common random numbers, seed 20260730'
+    decimals: 6
+- id: tab-demonetisation-persist
+  kind: computation
+  passage: '| demonetisation | $0.950$ | $1.612519$ | $0.63050$ | $0.5050$ | $+0.0065$ |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /matched_suppression/policies/demonetisation/p_persist_refuted
+    reported: '0.63050'
+    units: probability
+    conditions: 'matched suppression: 25 generations, 4,000 replicates, common random numbers, seed 20260730'
+    decimals: 5
+- id: tab-demonetisation-absorbed
+  kind: computation
+  passage: '| demonetisation | $0.950$ | $1.612519$ | $0.63050$ | $0.5050$ | $+0.0065$ |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /matched_suppression/policies/demonetisation/p_absorbed_vindicable
+    reported: '0.5050'
+    units: probability
+    conditions: 'matched suppression: 25 generations, 4,000 replicates, common random numbers, seed 20260730'
+    decimals: 4
+- id: tab-demonetisation-dvind
+  kind: computation
+  passage: '| demonetisation | $0.950$ | $1.612519$ | $0.63050$ | $0.5050$ | $+0.0065$ |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /matched_suppression/policies/demonetisation/delta_vindication
+    reported: '+0.0065'
+    units: change in absorption probability
+    conditions: 'matched suppression: 25 generations, 4,000 replicates, common random numbers, seed 20260730'
+    decimals: 4
+- id: tab-absorp-rate
+  kind: computation
+  passage: '| absorptivity | $a = 0.328$ | $1.856918$ | $0.35450$ | $0.8200$ | $+0.3215$ |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /matched_suppression/policies/absorptivity/test_rate
+    reported: '0.328'
+    units: absorptive capacity a
+    conditions: 'matched suppression: 25 generations, 4,000 replicates, common random numbers, seed 20260730'
+    decimals: 3
+- id: tab-absorp-persist
+  kind: computation
+  passage: '| absorptivity | $a = 0.328$ | $1.856918$ | $0.35450$ | $0.8200$ | $+0.3215$ |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /matched_suppression/policies/absorptivity/p_persist_refuted
+    reported: '0.35450'
+    units: probability
+    conditions: 'matched suppression: 25 generations, 4,000 replicates, common random numbers, seed 20260730'
+    decimals: 5
+- id: tab-absorp-absorbed
+  kind: computation
+  passage: '| absorptivity | $a = 0.328$ | $1.856918$ | $0.35450$ | $0.8200$ | $+0.3215$ |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /matched_suppression/policies/absorptivity/p_absorbed_vindicable
+    reported: '0.8200'
+    units: probability
+    conditions: 'matched suppression: 25 generations, 4,000 replicates, common random numbers, seed 20260730'
+    decimals: 4
+- id: tab-absorp-dvind
+  kind: computation
+  passage: '| absorptivity | $a = 0.328$ | $1.856918$ | $0.35450$ | $0.8200$ | $+0.3215$ |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /matched_suppression/policies/absorptivity/delta_vindication
+    reported: '+0.3215'
+    units: change in absorption probability
+    conditions: 'matched suppression: 25 generations, 4,000 replicates, common random numbers, seed 20260730'
+    decimals: 4
+- id: tab-base-persist
+  kind: computation
+  passage: '| baseline | | $1.856918$ | $0.70825$ | $0.4985$ | |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /matched_suppression/baseline_refuted/p_persist
+    reported: '0.70825'
+    units: probability
+    conditions: 'matched suppression: 25 generations, 4,000 replicates, common random numbers, seed 20260730'
+    decimals: 5
+- id: tab-base-absorbed
+  kind: computation
+  passage: '| baseline | | $1.856918$ | $0.70825$ | $0.4985$ | |'
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /matched_suppression/baseline_vindicable/p_absorbed
+    reported: '0.4985'
+    units: probability
+    conditions: 'matched suppression: 25 generations, 4,000 replicates, common random numbers, seed 20260730'
+    decimals: 4
+- id: sec6-base
+  kind: computation
+  passage: Friction, deplatforming and correction reach the target by lowering the vindicable claim's
+    absorption probability from $0.4985$ to between $0.3255$ and $0.360$, a loss of $28$ to $35$ per cent
+    of its baseline chance of vindication.
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /matched_suppression/baseline_vindicable/p_absorbed
+    reported: '0.4985'
+    units: probability
+    conditions: 'matched suppression: 25 generations, 4,000 replicates, common random numbers, seed 20260730'
+    decimals: 4
+- id: sec6-fric
+  kind: computation
+  passage: Friction, deplatforming and correction reach the target by lowering the vindicable claim's
+    absorption probability from $0.4985$ to between $0.3255$ and $0.360$, a loss of $28$ to $35$ per cent
+    of its baseline chance of vindication.
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /matched_suppression/policies/friction/p_absorbed_vindicable
+    reported: '0.3255'
+    units: probability
+    conditions: 'matched suppression: 25 generations, 4,000 replicates, common random numbers, seed 20260730'
+    decimals: 4
+- id: sec6-depl
+  kind: computation
+  passage: Friction, deplatforming and correction reach the target by lowering the vindicable claim's
+    absorption probability from $0.4985$ to between $0.3255$ and $0.360$, a loss of $28$ to $35$ per cent
+    of its baseline chance of vindication.
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /matched_suppression/policies/deplatforming/p_absorbed_vindicable
+    reported: '0.360'
+    units: probability
+    conditions: 'matched suppression: 25 generations, 4,000 replicates, common random numbers, seed 20260730'
+    decimals: 3
+- id: fric-extinct
+  kind: computation
+  passage: Under friction its extinction probability is $0.55075$.
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /matched_suppression/policies/friction/p_extinct_vindicable
+    reported: '0.55075'
+    units: probability
+    conditions: 'matched suppression: 25 generations, 4,000 replicates, common random numbers, seed 20260730'
+    decimals: 5
+- id: demon-max
+  kind: computation
+  passage: Demonetisation at its admissible maximum of $0.95$ leaves persistence at $0.63050$, and its
+    effect on absorption, $+0.0065$, is within Monte Carlo error.
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /matched_suppression/policies/demonetisation/intensity
+    reported: '0.95'
+    units: lever intensity
+    conditions: 'matched suppression: 25 generations, 4,000 replicates, common random numbers, seed 20260730'
+    decimals: 2
+- id: demon-persist
+  kind: computation
+  passage: Demonetisation at its admissible maximum of $0.95$ leaves persistence at $0.63050$, and its
+    effect on absorption, $+0.0065$, is within Monte Carlo error.
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /matched_suppression/policies/demonetisation/p_persist_refuted
+    reported: '0.63050'
+    units: probability
+    conditions: 'matched suppression: 25 generations, 4,000 replicates, common random numbers, seed 20260730'
+    decimals: 5
+- id: demon-dvind
+  kind: computation
+  passage: Demonetisation at its admissible maximum of $0.95$ leaves persistence at $0.63050$, and its
+    effect on absorption, $+0.0065$, is within Monte Carlo error.
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /matched_suppression/policies/demonetisation/delta_vindication
+    reported: '+0.0065'
+    units: change in absorption probability
+    conditions: 'matched suppression: 25 generations, 4,000 replicates, common random numbers, seed 20260730'
+    decimals: 4
+- id: absorp-rate
+  kind: computation
+  passage: Raising the test rate from $0.05$ to $0.328$ leaves $\mathcal{R}_F$ at $1.856918$, since absorptivity
+    does not act on the architecture.
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /matched_suppression/policies/absorptivity/test_rate
+    reported: '0.328'
+    units: absorptive capacity a
+    conditions: 'matched suppression: 25 generations, 4,000 replicates, common random numbers, seed 20260730'
+    decimals: 3
+- id: absorp-rf
+  kind: computation
+  passage: Raising the test rate from $0.05$ to $0.328$ leaves $\mathcal{R}_F$ at $1.856918$, since absorptivity
+    does not act on the architecture.
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /matched_suppression/policies/absorptivity/R_F
+    reported: '1.856918'
+    units: spectral radius
+    conditions: 'matched suppression: 25 generations, 4,000 replicates, common random numbers, seed 20260730'
+    decimals: 6
+- id: absorp-persist
+  kind: computation
+  passage: The refuted formation's persistence falls to $0.35450$, at the matched target, because each
+    failed public test costs it reproductive capacity.
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /matched_suppression/policies/absorptivity/p_persist_refuted
+    reported: '0.35450'
+    units: probability
+    conditions: 'matched suppression: 25 generations, 4,000 replicates, common random numbers, seed 20260730'
+    decimals: 5
+- id: absorp-base
+  kind: computation
+  passage: The vindicable claim's absorption probability rises from $0.4985$ to $0.8200$.
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /matched_suppression/baseline_vindicable/p_absorbed
+    reported: '0.4985'
+    units: probability
+    conditions: 'matched suppression: 25 generations, 4,000 replicates, common random numbers, seed 20260730'
+    decimals: 4
+- id: absorp-abs
+  kind: computation
+  passage: The vindicable claim's absorption probability rises from $0.4985$ to $0.8200$.
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /matched_suppression/policies/absorptivity/p_absorbed_vindicable
+    reported: '0.8200'
+    units: probability
+    conditions: 'matched suppression: 25 generations, 4,000 replicates, common random numbers, seed 20260730'
+    decimals: 4
+- id: sweep-0-abs
+  kind: computation
+  passage: At $a = 0$ no claim is tested, the vindicable claim is absorbed with probability $0$, and the
+    refuted formation persists with probability $0.71475$.
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /absorption_sweep/sweep/a=0.0/p_absorbed_vindicable
+    reported: '0'
+    units: probability
+    conditions: absorptive-capacity sweep, no process lever, baseline architecture
+    decimals: 0
+- id: sweep-0-per
+  kind: computation
+  passage: At $a = 0$ no claim is tested, the vindicable claim is absorbed with probability $0$, and the
+    refuted formation persists with probability $0.71475$.
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /absorption_sweep/sweep/a=0.0/p_persist_refuted
+    reported: '0.71475'
+    units: probability
+    conditions: absorptive-capacity sweep, no process lever, baseline architecture
+    decimals: 5
+- id: sweep-02-abs
+  kind: computation
+  passage: At $a = 0.2$ absorption reaches $0.775$ while persistence has fallen only to $0.57525$.
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /absorption_sweep/sweep/a=0.2/p_absorbed_vindicable
+    reported: '0.775'
+    units: probability
+    conditions: absorptive-capacity sweep, no process lever, baseline architecture
+    decimals: 3
+- id: sweep-02-per
+  kind: computation
+  passage: At $a = 0.2$ absorption reaches $0.775$ while persistence has fallen only to $0.57525$.
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /absorption_sweep/sweep/a=0.2/p_persist_refuted
+    reported: '0.57525'
+    units: probability
+    conditions: absorptive-capacity sweep, no process lever, baseline architecture
+    decimals: 5
+- id: sweep-05-abs
+  kind: computation
+  passage: At $a = 0.5$ absorption is $0.86375$ and persistence $0.12575$.
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /absorption_sweep/sweep/a=0.5/p_absorbed_vindicable
+    reported: '0.86375'
+    units: probability
+    conditions: absorptive-capacity sweep, no process lever, baseline architecture
+    decimals: 5
+- id: sweep-05-per
+  kind: computation
+  passage: At $a = 0.5$ absorption is $0.86375$ and persistence $0.12575$.
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /absorption_sweep/sweep/a=0.5/p_persist_refuted
+    reported: '0.12575'
+    units: probability
+    conditions: absorptive-capacity sweep, no process lever, baseline architecture
+    decimals: 5
+- id: sweep-1-abs
+  kind: computation
+  passage: At $a = 1.0$ absorption is $0.92$ and persistence $0.00175$.
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /absorption_sweep/sweep/a=1.0/p_absorbed_vindicable
+    reported: '0.92'
+    units: probability
+    conditions: absorptive-capacity sweep, no process lever, baseline architecture
+    decimals: 2
+- id: sweep-1-per
+  kind: computation
+  passage: At $a = 1.0$ absorption is $0.92$ and persistence $0.00175$.
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /absorption_sweep/sweep/a=1.0/p_persist_refuted
+    reported: '0.00175'
+    units: probability
+    conditions: absorptive-capacity sweep, no process lever, baseline architecture
+    decimals: 5
+- id: bist-ratio
+  kind: computation
+  passage: With $\delta = 0.2$ and $\beta = 1.6$, so that $\beta/\delta = 8$, the unstable root is $0.146447$
+    and the stable root $0.853553$.
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /subcritical_persistence/bistability_condition_beta_over_delta
+    reported: '8'
+    units: beta/delta
+    conditions: delta 0.2, beta 1.6
+    decimals: 0
+- id: unstable-root
+  kind: computation
+  passage: With $\delta = 0.2$ and $\beta = 1.6$, so that $\beta/\delta = 8$, the unstable root is $0.146447$
+    and the stable root $0.853553$.
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /subcritical_persistence/critical_seed
+    reported: '0.146447'
+    units: prevalence
+    conditions: delta 0.2, beta 1.6
+    decimals: 6
+- id: stable-root
+  kind: computation
+  passage: With $\delta = 0.2$ and $\beta = 1.6$, so that $\beta/\delta = 8$, the unstable root is $0.146447$
+    and the stable root $0.853553$.
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /subcritical_persistence/established_equilibrium
+    reported: '0.853553'
+    units: prevalence
+    conditions: delta 0.2, beta 1.6
+    decimals: 6
+- id: endpoint-below
+  kind: computation
+  passage: Integration from a seed $10$ per cent below the unstable root ends at $0$, and from $10$ per
+    cent above it ends at $0.85355339$.
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /subcritical_persistence/endpoint_from_seed_below_critical
+    reported: '0'
+    units: prevalence at end of integration
+    conditions: seed 10 percent below the unstable root
+    decimals: 0
+- id: endpoint-above
+  kind: computation
+  passage: Integration from a seed $10$ per cent below the unstable root ends at $0$, and from $10$ per
+    cent above it ends at $0.85355339$.
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /subcritical_persistence/endpoint_from_seed_above_critical
+    reported: '0.85355339'
+    units: prevalence at end of integration
+    conditions: seed 10 percent above the unstable root
+    decimals: 8
+- id: concl-base
+  kind: computation
+  passage: In the construct, raising that rate to the suppression achieved by friction increases the vindicable
+    claim's absorption probability from $0.4985$ to $0.820$, whereas the process levers lower it by $28$
+    to $35$ per cent.
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /matched_suppression/baseline_vindicable/p_absorbed
+    reported: '0.4985'
+    units: probability
+    conditions: 'matched suppression: 25 generations, 4,000 replicates, common random numbers, seed 20260730'
+    decimals: 4
+- id: concl-absorp
+  kind: computation
+  passage: In the construct, raising that rate to the suppression achieved by friction increases the vindicable
+    claim's absorption probability from $0.4985$ to $0.820$, whereas the process levers lower it by $28$
+    to $35$ per cent.
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /matched_suppression/policies/absorptivity/p_absorbed_vindicable
+    reported: '0.820'
+    units: probability
+    conditions: 'matched suppression: 25 generations, 4,000 replicates, common random numbers, seed 20260730'
+    decimals: 3
+- id: seed
+  kind: computation
+  passage: The simulation (`analyses.py`, `figures.py`, `run_all.py`) is deterministic given seed $20260730$
+    and reproduces every number and figure reported here.
+  evidence:
+    file: simulation/output/results.json
+    run_id: subcriticality
+    pointer: /seed
+    reported: '20260730'
+    units: random seed
+    conditions: all stochastic analyses
+    decimals: 0
+- id: bettencourt-r0
+  kind: source
+  passage: Models of idea diffusion are decades old, and the reproduction number has been estimated for
+    ideas [@bettencourt2006]; an opinion reproduction number for content cascades on networks has been
+    derived [@brooks2025]; @sperber1985 proposed an epidemiology of representations while cautioning that
+    representations transform in transmission; and next-generation construction with a multitype offspring
+    matrix is standard technique [@diekmann2010].
+  evidence:
+    citation_id: bettencourt2006
+    locator: Section 3.3 (arXiv physics/0502067)
+    verified: true
+    verification_note: 'Abstract (via Semantic Scholar) and the arXiv full text checked: the authors fit
+      epidemic models to the spread of Feynman diagrams and define and compute basic reproductive numbers
+      R0 for the idea.'
+- id: brooks-orn
+  kind: source
+  passage: Models of idea diffusion are decades old, and the reproduction number has been estimated for
+    ideas [@bettencourt2006]; an opinion reproduction number for content cascades on networks has been
+    derived [@brooks2025]; @sperber1985 proposed an epidemiology of representations while cautioning that
+    representations transform in transmission; and next-generation construction with a multitype offspring
+    matrix is standard technique [@diekmann2010].
+  evidence:
+    citation_id: brooks2025
+    locator: Abstract
+    verified: true
+    verification_note: DOI 10.1063/5.0206431; the Crossref abstract defines an opinion reproduction number
+      for a bounded-confidence content-spreading model on networks.
+- id: diekmann-ngm
+  kind: source
+  passage: Models of idea diffusion are decades old, and the reproduction number has been estimated for
+    ideas [@bettencourt2006]; an opinion reproduction number for content cascades on networks has been
+    derived [@brooks2025]; @sperber1985 proposed an epidemiology of representations while cautioning that
+    representations transform in transmission; and next-generation construction with a multitype offspring
+    matrix is standard technique [@diekmann2010].
+  evidence:
+    citation_id: diekmann2010
+    locator: Abstract
+    verified: true
+    verification_note: DOI 10.1098/rsif.2009.0386; the Crossref abstract gives a recipe for constructing
+      the next-generation matrix for compartmental models and identifies R0 as its dominant eigenvalue.
+- id: yee-four
+  kind: source
+  passage: Of the four failure points @yee2025 identifies for epidemiological transfers (ontology, measurement,
+    mechanism and intervention transfer), the construct addresses the first by individuating the object
+    and the last by declining to convert a threshold into a policy.
+  evidence:
+    citation_id: yee2025
+    locator: Abstract
+    verified: true
+    verification_note: DOI 10.1007/s11229-025-05246-6; the Crossref abstract lists four arguments concerning
+      the ontology of misinformation, measurement, individuation of mechanisms and application of interventions.
+- id: taylor-abeyance
+  kind: source
+  passage: 'The mechanism is the one described by resource-mobilisation sociology: organisations, professional
+    staff and money let a movement survive a hostile period [@mccarthy1977], and identity and abeyance
+    structures preserve continuity when mobilisation is impossible [@taylor1989; @polletta2001].'
+  evidence:
+    citation_id: taylor1989
+    locator: Abstract
+    verified: true
+    verification_note: DOI 10.2307/2117752; the OpenAlex abstract describes abeyance structures that let
+      challenging groups continue in nonreceptive political climates.
+- id: mccarthy-rm
+  kind: source
+  passage: 'The mechanism is the one described by resource-mobilisation sociology: organisations, professional
+    staff and money let a movement survive a hostile period [@mccarthy1977], and identity and abeyance
+    structures preserve continuity when mobilisation is impossible [@taylor1989; @polletta2001].'
+  evidence:
+    citation_id: mccarthy1977
+    locator: Abstract
+    verified: true
+    verification_note: DOI 10.1086/226464; the OpenAlex abstract presents the resource mobilization perspective
+      on social movement organizations and their resources.
+- id: centola-complex
+  kind: source
+  passage: 'Consider the simplest model in which adoption requires reinforcement from several contacts,
+    the empirically supported case for behaviours that carry social cost [@centola2007; @centola2010]:'
+  evidence:
+    citation_id: centola2007
+    locator: Abstract
+    verified: true
+    verification_note: DOI 10.1086/521848; the OpenAlex abstract defines complex contagions as requiring
+      social affirmation from multiple sources and gives high-risk social movements as an example.
+- id: centola-experiment
+  kind: source
+  passage: 'Consider the simplest model in which adoption requires reinforcement from several contacts,
+    the empirically supported case for behaviours that carry social cost [@centola2007; @centola2010]:'
+  evidence:
+    citation_id: centola2010
+    locator: Abstract (editor's summary)
+    verified: true
+    verification_note: DOI 10.1126/science.1185231; the Crossref summary reports that behaviour spread
+      more readily on clustered networks, where people are exposed to several adopters.
+- id: vdd-backward
+  kind: source
+  passage: This is the social analogue of the backward bifurcation known in compartmental epidemiology
+    [@driessche2002].
+  evidence:
+    citation_id: driessche2002
+    locator: Title
+    verified: true
+    verification_note: DOI 10.1016/S0025-5564(02)00108-6; no abstract was retrievable, and the verification
+      rests on the record's title, which names sub-threshold endemic equilibria, the phenomenon called
+      backward bifurcation.
+- id: watts-threshold
+  kind: source
+  passage: Threshold models of collective behaviour have drawn these distinctions since @granovetter1978
+    and @watts2002, and reading a local invasion criterion as a verdict on social viability confuses local
+    stability with global behaviour.
+  evidence:
+    citation_id: watts2002
+    locator: Abstract
+    verified: true
+    verification_note: DOI 10.1073/pnas.082090499; the Crossref abstract describes a threshold model of
+      cascades in which propagation can be limited by the local stability of nodes, distinguishing rare
+      large cascades from local behaviour.
+- id: walter-fc
+  kind: source
+  passage: 'They have their own evidence base, which is mixed: correction and inoculation produce real
+    but modest and heterogeneous effects on proximal outcomes [@walter2019; @lu2023], and a careful test
+    of several prominent interventions found that they reduce misperceptions while also increasing scepticism
+    toward accurate information [@hoes2024], an individual-level counterpart of the formation-level result
+    reported here.'
+  evidence:
+    citation_id: walter2019
+    locator: Abstract
+    verified: true
+    verification_note: DOI 10.1080/10584609.2019.1668894; the OpenAlex abstract reports a meta-analytic
+      effect d = 0.29 attenuated by preexisting beliefs, ideology and knowledge.
+- id: lu-inoc
+  kind: source
+  passage: 'They have their own evidence base, which is mixed: correction and inoculation produce real
+    but modest and heterogeneous effects on proximal outcomes [@walter2019; @lu2023], and a careful test
+    of several prominent interventions found that they reduce misperceptions while also increasing scepticism
+    toward accurate information [@hoes2024], an individual-level counterpart of the formation-level result
+    reported here.'
+  evidence:
+    citation_id: lu2023
+    locator: Abstract
+    verified: true
+    verification_note: DOI 10.2196/49255; the Crossref abstract reports small to moderate inoculation
+      effects (d about 0.2-0.36), a non-significant effect on misinformation sharing intention, and moderator
+      differences.
+- id: hoes-scepticism
+  kind: source
+  passage: 'They have their own evidence base, which is mixed: correction and inoculation produce real
+    but modest and heterogeneous effects on proximal outcomes [@walter2019; @lu2023], and a careful test
+    of several prominent interventions found that they reduce misperceptions while also increasing scepticism
+    toward accurate information [@hoes2024], an individual-level counterpart of the formation-level result
+    reported here.'
+  evidence:
+    citation_id: hoes2024
+    locator: Abstract
+    verified: true
+    verification_note: DOI 10.1038/s41562-024-01884-x; the Crossref abstract states that all interventions
+      reduced belief in false information while reducing the credibility of factual information.
+- id: costello-eoc
+  kind: source
+  passage: A widely cited demonstration that dialogue can durably reduce conspiracy belief is now under
+    an editorial expression of concern and should not anchor conclusions [@costello2024; @thorp2026].
+  evidence:
+    citation_id: thorp2026
+    locator: Crossref update metadata
+    verified: true
+    verification_note: DOI 10.1126/science.aej2383 is typed in Crossref as an expression of concern (11
+      June 2026) whose update-to target is 10.1126/science.adq1814 (Costello, Pennycook and Rand 2024).
+- id: costello-claim
+  kind: source
+  passage: A widely cited demonstration that dialogue can durably reduce conspiracy belief is now under
+    an editorial expression of concern and should not anchor conclusions [@costello2024; @thorp2026].
+  evidence:
+    citation_id: costello2024
+    locator: Abstract
+    verified: true
+    verification_note: DOI 10.1126/science.adq1814; the abstract reports that AI dialogues reduced conspiracy
+      belief by about 20% with effects persisting two months.
+- id: paolillo-mix
+  kind: source
+  passage: Online flat-earth participation is heterogeneous, mixing literal conviction with religious
+    framing, pseudo-scientific argument, antagonistic signalling and trolling [@paolillo2018]; forum culture
+    differs systematically from social-media culture [@pilati2024]; and the qualitative studies that document
+    conversion rely on small selected samples [@pahuus2024].
+  evidence:
+    citation_id: paolillo2018
+    locator: Abstract
+    verified: true
+    verification_note: DOI 10.5210/fm.v23i12.8251; the Crossref abstract describes flat-earth YouTube
+      content as a fusion of conspiracy theory, trolling, religious fundamentalism and other influences.
+- id: pilati-forum
+  kind: source
+  passage: Online flat-earth participation is heterogeneous, mixing literal conviction with religious
+    framing, pseudo-scientific argument, antagonistic signalling and trolling [@paolillo2018]; forum culture
+    differs systematically from social-media culture [@pilati2024]; and the qualitative studies that document
+    conversion rely on small selected samples [@pahuus2024].
+  evidence:
+    citation_id: pilati2024
+    locator: Abstract
+    verified: true
+    verification_note: DOI 10.1177/14614448241252593; the Crossref abstract contrasts the Flat Earth Society
+      forum's pseudo-scientific discourse with the subreddit's antagonism and trolling.
+- id: pahuus-sample
+  kind: source
+  passage: Online flat-earth participation is heterogeneous, mixing literal conviction with religious
+    framing, pseudo-scientific argument, antagonistic signalling and trolling [@paolillo2018]; forum culture
+    differs systematically from social-media culture [@pilati2024]; and the qualitative studies that document
+    conversion rely on small selected samples [@pahuus2024].
+  evidence:
+    citation_id: pahuus2024
+    locator: Abstract
+    verified: true
+    verification_note: DOI 10.1007/s12124-024-09857-5; the Crossref abstract describes an in-depth narrative
+      analysis of three individuals' life stories.
+- id: formation-def
+  kind: definition
+  passage: We call such a package a claim-centred formation and define its identity by the historical
+    continuity of that structure, since the propositions mutate while the organisation persists.
+  rationale: Defines the unit whose reproduction is modelled; identity by continuity of structure lets
+    the construct follow a formation whose propositions mutate.
+- id: neutrality-def
+  kind: definition
+  passage: Content neutrality is the condition that the map reads recruitment, retention, organisational
+    and amplification parameters and does not read the claim-set.
+  rationale: Defines the class of interventions to which the proposition applies.
+- id: absorption-def
+  kind: definition
+  passage: We call this absorption.
+  rationale: Names the third fate introduced by the paper.
+- id: offspring-matrix
+  kind: definition
+  passage: and the lifetime offspring matrix, with rows indexing offspring type and columns source type,
+    is
+  rationale: Defines K and R_F as a spectral radius, the standard next-generation construction.
+- id: proposition
+  kind: interpretation
+  passage: Then $K(g_\pi(\theta))$ is the same matrix for both, so $\mathcal{R}_F$ after intervention
+    is the same number for both, and
+  rationale: 'Deductive consequence of the definitions: the architecture contains no truth argument and
+    content-neutral maps add none; the simulation''s zero discrepancy is a check, not the evidence.'
+- id: rho-bound
+  kind: interpretation
+  passage: 'The statement is general: for a nonnegative matrix $\rho(K) \ge K_{TT}$, so no lever that
+    acts only on organisations can bring below one a formation whose transmitter channel alone exceeds
+    one.'
+  rationale: Standard Perron-Frobenius bound (the spectral radius of a nonnegative matrix is at least
+    each diagonal entry), applied to the baseline K_TT = 1.6.
+- id: baseline-stipulated
+  kind: assumption
+  passage: These values describe a construct.
+  rationale: The architecture parameters are stipulated for illustration and are not estimates for any
+    movement; magnitudes depend on them.
+- id: absorption-hazard
+  kind: assumption
+  passage: In each generation a decisive test occurs with probability $1 - e^{-a}$, where $a$ is the system's
+    absorptive capacity.
+  rationale: Absorption is modelled as a per-generation hazard 1 - exp(-a); the functional form is a modelling
+    choice.
+- id: failure-penalty
+  kind: assumption
+  passage: A false claim that is tested fails publicly, and each failure reduces its offspring matrix
+    by a fraction set at $0.15$.
+  rationale: The 0.15 reduction of the offspring matrix per failed test is a stipulated parameter.
+- id: perfect-test
+  kind: assumption
+  passage: First, in the construct a true claim passes its test with certainty and a false one fails with
+    certainty, and no real test is that clean.
+  rationale: States the perfect-test assumption and the direction in which relaxing it moves the result.
+- id: asym-direction
+  kind: assumption
+  passage: On this description the refuted formation has the larger organisational channel and the challenger
+    the smaller one.
+  rationale: The direction of architectural asymmetry is a substantive premise drawn from the preceding
+    description, not a measurement.
+- id: asym-monotone
+  kind: interpretation
+  passage: The index falls monotonically across the five ratios examined.
+  rationale: 'Read from /architecture_asymmetry/sweep: 0.199, 0.134, 0.104, 0.080, 0.068 at ratios 1,
+    1.5, 2, 3, 4.'
+- id: loss-28-35
+  kind: interpretation
+  passage: Friction, deplatforming and correction reach the target by lowering the vindicable claim's
+    absorption probability from $0.4985$ to between $0.3255$ and $0.360$, a loss of $28$ to $35$ per cent
+    of its baseline chance of vindication.
+  rationale: 'Derived from results.json: deplatforming 0.1385/0.4985 = 27.8 percent and friction 0.1730/0.4985
+    = 34.7 percent of baseline absorption; correction 0.1415/0.4985 = 28.4 percent lies between.'
+- id: concl-loss
+  kind: interpretation
+  passage: In the construct, raising that rate to the suppression achieved by friction increases the vindicable
+    claim's absorption probability from $0.4985$ to $0.820$, whereas the process levers lower it by $28$
+    to $35$ per cent.
+  rationale: 'Same derivation as the Section 6 range: 0.1385/0.4985 to 0.1730/0.4985, i.e. 28 to 35 percent.'
+- id: mc-error
+  kind: interpretation
+  passage: Demonetisation at its admissible maximum of $0.95$ leaves persistence at $0.63050$, and its
+    effect on absorption, $+0.0065$, is within Monte Carlo error.
+  rationale: The difference 0.0065 is below the stated maximum binomial standard error 0.0079 of each
+    estimate.
+- id: asym-reduces
+  kind: interpretation
+  passage: The asymmetry reduces discrimination, because friction that a well-resourced formation absorbs
+    removes a small one from the field.
+  rationale: Mechanistic reading of the architecture sweep.
+- id: rate-to-maximise
+  kind: interpretation
+  passage: 'The claim supported here is limited to two points: the rate at which claims are brought to
+    decision is the quantity to maximise, and that rate, unlike reproduction suppression, treats true
+    and false claims differently.'
+  rationale: The paper's central conclusion, stated with its scope within the construct.
+- id: classifier-reqs
+  kind: normative
+  passage: These are design requirements and are not derived here.
+  rationale: Normative design requirements for a claim-level classifier, explicitly not derived from the
+    model.
+- id: policy-question
+  kind: normative
+  passage: The corresponding policy question for a society concerned with organised falsehood is how long
+    it takes, and at what cost, to establish that a belief is false.
+  rationale: Normative reframing of the policy target drawn from the construct.
+- id: flat-earth-sentinel
+  kind: interpretation
+  passage: Visibility does not establish prevalence, and prevalence does not establish assent.
+  rationale: Evidential limit drawn from the cited qualitative and platform studies.
+runs:
+- id: subcriticality
+  required: true
+  record: verification/subcriticality.json
